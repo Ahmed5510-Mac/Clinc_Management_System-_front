@@ -9,7 +9,8 @@ const path = require('path');
 require('dotenv').config();
 
 /*------------------------------- Routers-------------------------------*/
-const medicineRouter = require("./Routers/medicineRouter")
+const patientRouter =require('./Routers/patientRouter');
+
 /*------------------------------- Images-------------------------------*/
 //image variable
 const multer = require('multer');
@@ -77,7 +78,11 @@ app.use(body_parser.json());
 app.use(body_parser.urlencoded({extended:false})); 
 
 /*------------------------------- RoutersMiddleWares-------------------------------*/
-app.use(medicineRouter)
+app.use(patientRouter);
+
+
+
+
 //Not found MW
 app.use((request, response) => {
   response.status(404).json({ data: 'Not Fond' });
