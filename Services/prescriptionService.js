@@ -4,7 +4,7 @@ module.exports.validatePostPrescription = () => {
     body("medicine").isInt().withMessage("medicine is ref"),
     body("patient").isInt().withMessage("patient is ref"),
     body("doctor").isInt().withMessage("doctor is ref"),
-    body("appointment").isInt().withMessage("appointment is ref")
+    body("appointment").isInt().withMessage("appointment is reff")
   ];
 };
 

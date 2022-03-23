@@ -1,5 +1,4 @@
 const express = require("express");
-const { body, query, param } = require("express-validator");
 const {
     getAllPrescription,
     getPrescriptionById,

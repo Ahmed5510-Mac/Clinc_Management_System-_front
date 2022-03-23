@@ -26,7 +26,7 @@ exports.createPrescription=(request,response,next)=>{
       })
     newPrescription.save()
           .then(data=>{
-            response.status(201).json({message:"added",data})
+            response.status(201).json({message:"add",data})
           })
           .catch(error=>next(error +"this is wrong"))    
 }

@@ -9,7 +9,7 @@ const prescriptionSchema= new mongoose.Schema({
     doctor:{type:Number,ref:"doctor"},
     appointment:{type:Number,ref:"appointment"},
 });
-
+//autoincremint id
 prescriptionSchema.plugin(autoincremint,{
     id:"prescription count",
     inc_field:"_id"
