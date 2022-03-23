@@ -1,7 +1,7 @@
 const Medicine = require("./../Models/medicine")
 const { validationResult } = require("express-validator");
 
-//get all speakers or one speakerr
+//get all medicines or one medicine
 exports.getAllMedicines= async(req,res,next)=>{
   if(req.params.id)
   {
@@ -15,7 +15,7 @@ exports.getAllMedicines= async(req,res,next)=>{
 
 //-------------------------------------------------------
 
-//post new speaker
+//post new medicine
 
 exports.createMedicine=async(req,res,next)=>{
 
@@ -41,7 +41,7 @@ exports.createMedicine=async(req,res,next)=>{
   res.json({msg:"Medicine Added",medicineData})
 }
 
-//update speaker
+//update medicine
  exports.updateMedicine=async(req,res,next)=>{
 
     let {_id,name,company ,quantity,description} = req.body;
@@ -63,7 +63,7 @@ exports.createMedicine=async(req,res,next)=>{
  }
 
 
-//Delete speaker
+//Delete medicine
 exports.removeMedicine=async(req,res,next)=>{
 
     try {
